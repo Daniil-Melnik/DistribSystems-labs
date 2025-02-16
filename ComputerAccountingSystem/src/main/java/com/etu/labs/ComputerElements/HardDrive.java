@@ -20,7 +20,7 @@ public class HardDrive {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "brand")
@@ -40,11 +40,11 @@ public class HardDrive {
     @Column(name = "connector_type")
     private DiskConnector connectorType;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -86,5 +86,16 @@ public class HardDrive {
 
     public void setConnectorType(DiskConnector connectorType) {
         this.connectorType = connectorType;
+    }
+
+    public HardDrive(){}
+
+    public  HardDrive(int id, DiskBrands diskBrand, int yearOfProduct, int capacity, DiskType diskType, DiskConnector connectorType){
+        setId(id);
+        setBrand(diskBrand);
+        setYearOfProduct(yearOfProduct);
+        setCapacity(capacity);
+        setType(diskType);
+        setConnectorType(connectorType);
     }
 }
