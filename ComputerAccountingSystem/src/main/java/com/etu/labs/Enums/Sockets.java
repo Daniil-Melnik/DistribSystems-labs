@@ -1,0 +1,11 @@
+package com.etu.labs.Enums;
+
+public enum Sockets {
+    LGA1700,
+    LGA1200,
+    LGA1851,
+    LGA1151,
+    LGA2066,
+    AM4,
+    AM5
+}
