@@ -3,7 +3,15 @@ package com.etu.labs.ComputerElements;
 import com.etu.labs.Enums.CPUs.CPUBrands;
 import com.etu.labs.Enums.CPUs.CPUSeries;
 import com.etu.labs.Enums.Sockets;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 @Table(name = "processor_units")

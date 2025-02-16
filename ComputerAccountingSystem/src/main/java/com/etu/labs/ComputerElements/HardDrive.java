@@ -15,7 +15,7 @@ import jakarta.persistence.GenerationType;
 
 
 @Entity
-@Table(name = "hard_drives")
+@Table(name = "disk_drives")
 public class HardDrive {
 
     @Id
@@ -23,74 +23,43 @@ public class HardDrive {
     private int id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "hdd_brand")
+    @Column(name = "disk_brand")
     private DiskBrands brand;
 
-    @Column(name = "hdd_year_of_product")
+    @Column(name = "disk_year_of_product")
     private int yearOfProduct;
 
-    @Column(name = "hdd_capacity")
+    @Column(name = "disk_capacity")
     private int capacity;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "hdd_type")
+    @Column(name = "disk_type")
     private DiskType type;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "hdd_connector_type")
+    @Column(name = "disk_connector_type")
     private DiskConnector connectorType;
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id;}
+    public void setId(int newId) { id = newId;}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public DiskBrands getBrand() { return brand;}
+    public void setBrand(DiskBrands newBrand) { brand = newBrand;}
 
-    public DiskBrands getBrand() {
-        return brand;
-    }
+    public int getYearOfProduct() { return yearOfProduct;}
+    public void setYearOfProduct(int newYearOfProduct) { yearOfProduct = newYearOfProduct;}
 
-    public void setBrand(DiskBrands brand) {
-        this.brand = brand;
-    }
+    public int getCapacity() { return capacity;}
+    public void setCapacity(int newCapacity) { capacity = newCapacity;}
 
-    public int getYearOfProduct() {
-        return yearOfProduct;
-    }
+    public DiskType getType() { return type;}
+    public void setType(DiskType newType) { type = newType;}
 
-    public void setYearOfProduct(int yearOfProduct) {
-        this.yearOfProduct = yearOfProduct;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public DiskType getType() {
-        return type;
-    }
-
-    public void setType(DiskType type) {
-        this.type = type;
-    }
-
-    public DiskConnector getConnectorType() {
-        return connectorType;
-    }
-
-    public void setConnectorType(DiskConnector connectorType) {
-        this.connectorType = connectorType;
-    }
+    public DiskConnector getConnectorType() { return connectorType;}
+    public void setConnectorType(DiskConnector newConnectorType) { connectorType = newConnectorType;}
 
     public HardDrive(){}
-
-    public  HardDrive(int id, DiskBrands diskBrand, int yearOfProduct, int capacity, DiskType diskType, DiskConnector connectorType){
+    public HardDrive(int id, DiskBrands diskBrand, int yearOfProduct, int capacity, DiskType diskType, DiskConnector connectorType){
         setId(id);
         setBrand(diskBrand);
         setYearOfProduct(yearOfProduct);
