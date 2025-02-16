@@ -23,21 +23,21 @@ public class HardDrive {
     private int id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "brand")
+    @Column(name = "hdd_brand")
     private DiskBrands brand;
 
-    @Column(name = "year_of_product")
+    @Column(name = "hdd_year_of_product")
     private int yearOfProduct;
 
-    @Column(name = "capacity")
+    @Column(name = "hdd_capacity")
     private int capacity;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "type")
+    @Column(name = "hdd_type")
     private DiskType type;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "connector_type")
+    @Column(name = "hdd_connector_type")
     private DiskConnector connectorType;
 
     public int getId() {
