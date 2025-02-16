@@ -15,7 +15,7 @@ import jakarta.persistence.GenerationType;
 
 
 @Entity
-@Table(name = "hard_drive")
+@Table(name = "hard_drives")
 public class HardDrive {
 
     @Id

@@ -3,12 +3,28 @@ package com.etu.labs.ComputerElements;
 import com.etu.labs.Enums.CPUs.CPUBrands;
 import com.etu.labs.Enums.CPUs.CPUSeries;
 import com.etu.labs.Enums.Sockets;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "processor_units")
 public class ProcessorUnit {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "cpu_socket")
     private Sockets socketType;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "cpu_brand")
     private CPUBrands cpuBrand;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "cpu_series")
     private CPUSeries cpuSeries;
+
+    @Column(name = "cpu_name")
     private String fullName;
 
     public void setId(int newId){ id = newId;}
