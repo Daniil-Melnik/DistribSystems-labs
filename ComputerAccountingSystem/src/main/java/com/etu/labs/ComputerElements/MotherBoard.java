@@ -65,6 +65,7 @@ public class MotherBoard {
     public int getNumRAM(){ return numRAM;}
 
     public MotherBoard(){}
+
     public MotherBoard(MotherBoardsBrands MBBrand, String fullName, Sockets socketType, RAMTypes ramType,
                        int numPCIe, int numRAM){
         setMBBrand(MBBrand);
