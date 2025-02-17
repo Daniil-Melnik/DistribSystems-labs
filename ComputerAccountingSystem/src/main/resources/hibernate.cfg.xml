@@ -11,5 +11,7 @@
         <property name="hibernate.connection.password">12345678</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">true</property>
+
+        <mapping class="com.etu.labs.ComputerElements.HardDrive"/>
     </session-factory>
 </hibernate-configuration>
