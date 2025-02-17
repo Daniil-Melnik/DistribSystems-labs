@@ -18,6 +18,7 @@ import jakarta.persistence.GenerationType;
 @Table(name = "mother_boards")
 public class MotherBoard {
     @Id
+    @Column(name = "mb_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

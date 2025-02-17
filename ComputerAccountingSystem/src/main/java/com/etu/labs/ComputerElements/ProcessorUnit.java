@@ -17,6 +17,7 @@ import jakarta.persistence.GenerationType;
 @Table(name = "processor_units")
 public class ProcessorUnit {
     @Id
+    @Column(name = "cpu_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

@@ -14,8 +14,9 @@ import jakarta.persistence.GenerationType;
 
 @Entity
 @Table(name = "ram_units")
-public class RandomAccesMemory {
+public class RandomAccessMemory {
     @Id
+    @Column(name = "ram_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

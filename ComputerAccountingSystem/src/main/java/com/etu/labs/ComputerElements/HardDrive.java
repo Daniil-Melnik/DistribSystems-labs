@@ -19,6 +19,7 @@ import jakarta.persistence.GenerationType;
 public class HardDrive {
 
     @Id
+    @Column(name = "disk_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
