@@ -60,6 +60,15 @@ public class HardDrive {
     public void setConnectorType(DiskConnector newConnectorType) { connectorType = newConnectorType;}
 
     public HardDrive(){}
+
+    public HardDrive(DiskBrands diskBrand, int yearOfProduct, int capacity, DiskType diskType, DiskConnector connectorType){
+        setBrand(diskBrand);
+        setYearOfProduct(yearOfProduct);
+        setCapacity(capacity);
+        setType(diskType);
+        setConnectorType(connectorType);
+    }
+
     public HardDrive(int id, DiskBrands diskBrand, int yearOfProduct, int capacity, DiskType diskType, DiskConnector connectorType){
         setId(id);
         setBrand(diskBrand);
