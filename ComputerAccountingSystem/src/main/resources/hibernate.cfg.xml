@@ -13,5 +13,9 @@
         <property name="hibernate.show_sql">true</property>
 
         <mapping class="com.etu.labs.ComputerElements.HardDrive"/>
+        <mapping class="com.etu.labs.ComputerElements.MotherBoard"/>
+        <mapping class="com.etu.labs.ComputerElements.ProcessorUnit"/>
+        <mapping class="com.etu.labs.ComputerElements.RandomAccessMemory"/>
+        <mapping class="com.etu.labs.Computer"/>
     </session-factory>
 </hibernate-configuration>

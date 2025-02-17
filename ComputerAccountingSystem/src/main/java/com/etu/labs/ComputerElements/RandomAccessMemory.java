@@ -28,7 +28,6 @@ public class RandomAccessMemory {
     @Column(name = "ram_type")
     private RAMTypes type;
 
-    @Enumerated(EnumType.STRING)
     @Column(name = "ram_name")
     private String fullName;
 
