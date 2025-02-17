@@ -1,6 +1,5 @@
-package com.etu.labs.DBUtils;
+package com.etu.labs.util;
 
-import com.etu.labs.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

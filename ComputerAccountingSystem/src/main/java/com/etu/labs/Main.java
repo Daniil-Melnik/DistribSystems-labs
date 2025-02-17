@@ -2,7 +2,7 @@ package com.etu.labs;
 
 import com.etu.labs.ComputerElements.HardDrive;
 import com.etu.labs.ComputerElements.MotherBoard;
-import com.etu.labs.DBUtils.GenericDB;
+import com.etu.labs.util.GenericDB;
 import com.etu.labs.Enums.Disk.DiskBrands;
 import com.etu.labs.Enums.Disk.DiskConnector;
 import com.etu.labs.Enums.Disk.DiskType;
