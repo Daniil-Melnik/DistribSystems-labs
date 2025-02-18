@@ -41,6 +41,9 @@ public class HardDrive {
     @Column(name = "disk_connector_type")
     private DiskConnector connectorType;
 
+    @Column(name = "disk_name")
+    private String diskName;
+
     public int getId() { return id;}
     public void setId(int newId) { id = newId;}
 
@@ -59,22 +62,27 @@ public class HardDrive {
     public DiskConnector getConnectorType() { return connectorType;}
     public void setConnectorType(DiskConnector newConnectorType) { connectorType = newConnectorType;}
 
+    public String getDiskName(){ return diskName;}
+    public void setDiskName(String newDiskName){ diskName = newDiskName;}
+
     public HardDrive(){}
 
-    public HardDrive(DiskBrands diskBrand, int yearOfProduct, int capacity, DiskType diskType, DiskConnector connectorType){
+    public HardDrive(DiskBrands diskBrand, int yearOfProduct, int capacity, DiskType diskType, DiskConnector connectorType, String diskName){
         setBrand(diskBrand);
         setYearOfProduct(yearOfProduct);
         setCapacity(capacity);
         setType(diskType);
         setConnectorType(connectorType);
+        setDiskName(diskName);
     }
 
-    public HardDrive(int id, DiskBrands diskBrand, int yearOfProduct, int capacity, DiskType diskType, DiskConnector connectorType){
+    public HardDrive(int id, DiskBrands diskBrand, int yearOfProduct, int capacity, DiskType diskType, DiskConnector connectorType, String diskName){
         setId(id);
         setBrand(diskBrand);
         setYearOfProduct(yearOfProduct);
         setCapacity(capacity);
         setType(diskType);
         setConnectorType(connectorType);
+        setDiskName(diskName);
     }
 }

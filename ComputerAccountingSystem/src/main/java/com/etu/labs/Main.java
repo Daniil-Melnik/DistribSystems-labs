@@ -13,7 +13,7 @@ import com.etu.labs.Enums.Sockets;
 public class Main {
     public static void main(String [] args){
         GenericDB<HardDrive> hardDriveDB = new GenericDB<>(HardDrive.class);
-        HardDrive newDisk = new HardDrive(DiskBrands.SEAGATE, 2019, 1000, DiskType.HDD, DiskConnector.SATA);
+        HardDrive newDisk = new HardDrive(DiskBrands.SEAGATE, 2019, 1000, DiskType.HDD, DiskConnector.SATA, "P3 CT500P3SSD8");
         hardDriveDB.create(newDisk);
 
         GenericDB<MotherBoard> motherBoardDB = new GenericDB<>(MotherBoard.class);

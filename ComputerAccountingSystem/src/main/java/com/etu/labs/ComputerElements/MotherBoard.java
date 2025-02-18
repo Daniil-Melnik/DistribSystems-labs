@@ -43,6 +43,12 @@ public class MotherBoard {
     @Column(name = "mb_num_ram")
     private int numRAM;
 
+    @Column(name = "mb_num_m2")
+    private int numM2;
+
+    @Column(name = "mb_num_sata")
+    private int numSATA;
+
     public void setId(int newId){id = newId;}
     public int getId(){ return id;}
 
@@ -64,15 +70,23 @@ public class MotherBoard {
     public void setNumRAM (int newNumRAM){ numRAM = newNumRAM;}
     public int getNumRAM(){ return numRAM;}
 
+    public void setNumM2(int newNumM2){ numM2 = newNumM2;}
+    public int getNumM2(){ return numM2;}
+
+    public void setNumSATA(int newNumSATA){ numSATA = newNumSATA;}
+    public int getNumSATA(){ return numSATA;}
+
     public MotherBoard(){}
 
     public MotherBoard(MotherBoardsBrands MBBrand, String fullName, Sockets socketType, RAMTypes ramType,
-                       int numPCIe, int numRAM){
+                       int numPCIe, int numRAM, int numSATA, int numM2){
         setMBBrand(MBBrand);
         setFullName(fullName);
         setSocketType(socketType);
         setRamType(ramType);
         setNumPCIe(numPCIe);
         setNumRAM(numRAM);
+        setNumM2(numM2);
+        setNumSATA(numSATA);
     }
 }
