@@ -16,14 +16,14 @@ import com.etu.labs.Enums.Sockets;
 import com.etu.labs.util.GenericDB;
 
 public class AddingEntities {
-    public static void main(String [] args){
+    public static void addEntities(){
         GenericDB<HardDrive> hardDriveDB = new GenericDB<>(HardDrive.class);
         GenericDB<MotherBoard> motherBoardDB = new GenericDB<>(MotherBoard.class);
         GenericDB<ProcessorUnit> processorUnitsDB = new GenericDB<>(ProcessorUnit.class);
         GenericDB<RandomAccessMemory> randomAccesMemoryDB = new GenericDB<>(RandomAccessMemory.class);
         GenericDB<Computer> computerDB = new GenericDB<>(Computer.class);
 
-        /*HardDrive newDisk = new HardDrive(DiskBrands.SEAGATE, 2019, 1000, DiskType.HDD, DiskConnector.SATA, "ST1000DM010");
+        HardDrive newDisk = new HardDrive(DiskBrands.SEAGATE, 2019, 1000, DiskType.HDD, DiskConnector.SATA, "ST1000DM010");
         hardDriveDB.create(newDisk);
 
         newDisk = new HardDrive(DiskBrands.CRUCIAL, 2024, 500, DiskType.SSD, DiskConnector.M_2, "P3 CT500P3SSD8");
@@ -48,7 +48,7 @@ public class AddingEntities {
         processorUnitsDB.create(processorUnit);
 
         RandomAccessMemory newRAM = new RandomAccessMemory(RAMBrands.KINGSTON, RAMTypes.DDR4, "KF432C16BBK2", 16);
-        randomAccesMemoryDB.create(newRAM);*/
+        randomAccesMemoryDB.create(newRAM);
 
         Computer newPC = new Computer(hardDriveDB.read(2), motherBoardDB.read(3), processorUnitsDB.read(2), randomAccesMemoryDB.read(1), 2614, 2);
         computerDB.create(newPC);
