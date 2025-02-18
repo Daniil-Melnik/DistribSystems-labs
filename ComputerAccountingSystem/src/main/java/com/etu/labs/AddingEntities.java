@@ -2,6 +2,9 @@ package com.etu.labs;
 
 import com.etu.labs.ComputerElements.HardDrive;
 import com.etu.labs.ComputerElements.MotherBoard;
+import com.etu.labs.ComputerElements.ProcessorUnit;
+import com.etu.labs.Enums.CPUs.CPUBrands;
+import com.etu.labs.Enums.CPUs.CPUSeries;
 import com.etu.labs.Enums.Disk.DiskBrands;
 import com.etu.labs.Enums.Disk.DiskConnector;
 import com.etu.labs.Enums.Disk.DiskType;
@@ -11,9 +14,10 @@ import com.etu.labs.Enums.Sockets;
 import com.etu.labs.util.GenericDB;
 
 public class AddingEntities {
-    public static void main(){
+    public static void main(String [] args){
         GenericDB<HardDrive> hardDriveDB = new GenericDB<>(HardDrive.class);
         GenericDB<MotherBoard> motherBoardDB = new GenericDB<>(MotherBoard.class);
+        GenericDB<ProcessorUnit> processorUnitsDB = new GenericDB<>(ProcessorUnit.class);
 
         HardDrive newDisk = new HardDrive(DiskBrands.SEAGATE, 2019, 1000, DiskType.HDD, DiskConnector.SATA, "ST1000DM010");
         hardDriveDB.create(newDisk);
@@ -32,5 +36,11 @@ public class AddingEntities {
 
         motherBoard = new MotherBoard(MotherBoardsBrands.MSI, "PRO B760-P WIFI DDR4", Sockets.LGA1700, RAMTypes.DDR4, 5, 2, 4, 2);
         motherBoardDB.create(motherBoard);
+
+        ProcessorUnit processorUnit = new ProcessorUnit(Sockets.LGA1150, CPUBrands.INTEL, CPUSeries.CORE_I7, "4790", RAMTypes.DDR3);
+        processorUnitsDB.create(processorUnit);
+
+        processorUnit = new ProcessorUnit(Sockets.LGA1700, CPUBrands.INTEL, CPUSeries.CORE_I5, "12400", RAMTypes.DDR4);
+        processorUnitsDB.create(processorUnit);
     }
 }

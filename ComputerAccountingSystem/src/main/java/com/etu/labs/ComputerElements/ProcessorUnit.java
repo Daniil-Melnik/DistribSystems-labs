@@ -2,6 +2,7 @@ package com.etu.labs.ComputerElements;
 
 import com.etu.labs.Enums.CPUs.CPUBrands;
 import com.etu.labs.Enums.CPUs.CPUSeries;
+import com.etu.labs.Enums.RAMTypes;
 import com.etu.labs.Enums.Sockets;
 
 import jakarta.persistence.Entity;
@@ -36,6 +37,9 @@ public class ProcessorUnit {
     @Column(name = "cpu_name")
     private String fullName;
 
+    @Column(name = "cpu_ram")
+    private RAMTypes ramType;
+
     public void setId(int newId){ id = newId;}
     public int getId(){ return id;}
 
@@ -51,12 +55,24 @@ public class ProcessorUnit {
     public void setFullName(String newFullName){ fullName = newFullName;}
     public String getFullName(){ return fullName;}
 
+    public void setRamType(RAMTypes newRamType){ ramType = newRamType;}
+    public RAMTypes getRamType(){ return ramType;}
+
     public ProcessorUnit(){}
-    public ProcessorUnit(int id, Sockets socketType, CPUBrands cpuBrand, CPUSeries cpuSeries, String fullName){
+
+    public ProcessorUnit( Sockets socketType, CPUBrands cpuBrand, CPUSeries cpuSeries, String fullName, RAMTypes ramType){
+        setSocketType(socketType);
+        setCpuBrand(cpuBrand);
+        setCpuSeries(cpuSeries);
+        setFullName(fullName);
+    }
+
+    public ProcessorUnit(int id, Sockets socketType, CPUBrands cpuBrand, CPUSeries cpuSeries, String fullName, RAMTypes ramType){
         setId(id);
         setSocketType(socketType);
         setCpuBrand(cpuBrand);
         setCpuSeries(cpuSeries);
         setFullName(fullName);
+        setRamType(ramType);
     }
 }
