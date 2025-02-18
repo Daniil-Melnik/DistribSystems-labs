@@ -37,6 +37,7 @@ public class ProcessorUnit {
     @Column(name = "cpu_name")
     private String fullName;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "cpu_ram")
     private RAMTypes ramType;
 

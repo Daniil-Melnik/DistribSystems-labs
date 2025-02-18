@@ -48,4 +48,21 @@ public class RandomAccessMemory {
 
     public void setCapacity(int newCapacity){ capacity = newCapacity;}
     public int getCapacity(){ return capacity;}
+
+    public RandomAccessMemory(){}
+
+    public RandomAccessMemory(int id, RAMBrands ramBrands, RAMTypes ramTypes, String fullName, int capacity){
+        setId(id);
+        setFullName(fullName);
+        setCapacity(capacity);
+        setBrand(ramBrands);
+        setType(ramTypes);
+    }
+
+    public RandomAccessMemory(RAMBrands ramBrands, RAMTypes ramTypes, String fullName, int capacity){
+        setFullName(fullName);
+        setCapacity(capacity);
+        setBrand(ramBrands);
+        setType(ramTypes);
+    }
 }

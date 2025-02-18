@@ -1,4 +1,4 @@
-package com.etu.labs;
+/*package com.etu.labs;
 
 import com.etu.labs.ComputerElements.HardDrive;
 import com.etu.labs.ComputerElements.MotherBoard;
@@ -20,4 +20,4 @@ public class Main {
         MotherBoard motherBoard = new MotherBoard(MotherBoardsBrands.ASROCK, "A520M-HVS", Sockets.AM4, RAMTypes.DDR4, 1, 2);
         motherBoardDB.create(motherBoard);
     }
-}
+}*/

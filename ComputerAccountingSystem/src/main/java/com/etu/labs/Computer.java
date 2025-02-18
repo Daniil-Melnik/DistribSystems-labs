@@ -19,6 +19,9 @@ import jakarta.persistence.OneToOne;
 public class Computer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "pc_id")
+    private int id;
+
     @Column(name = "inventory_number")
     private int inventoryNumber;
 
@@ -58,6 +61,9 @@ public class Computer {
 
     public void setNumOfRAM(int newNumOfRAM){ numOfRAM = newNumOfRAM;}
     public int getNumOfRAM(){ return  numOfRAM;}
+
+    public void setId(int newId){ id = newId;}
+    public int getId(){ return id;}
 
     public Computer(){}
 
