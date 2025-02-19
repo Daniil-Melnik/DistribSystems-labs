@@ -14,10 +14,22 @@ public class GenericDB<T> {
         this.type = type;
     }
 
-    public List<T> getAll() {
+    public List<T> readAll() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             String hql = "FROM " + type.getSimpleName();
             Query<T> query = session.createQuery(hql, type);
+            return query.getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public List<T> readByField(String fieldName, Object value) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            String hql = "FROM " + type.getSimpleName() + " WHERE " + fieldName + " = :value";
+            Query<T> query = session.createQuery(hql, type);
+            query.setParameter("value", value);
             return query.getResultList();
         } catch (Exception e) {
             e.printStackTrace();
