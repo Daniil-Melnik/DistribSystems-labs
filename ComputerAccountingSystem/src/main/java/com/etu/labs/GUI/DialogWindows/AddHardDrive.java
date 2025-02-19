@@ -1,8 +1,10 @@
 package com.etu.labs.GUI.DialogWindows;
 
+import com.etu.labs.ComputerElements.HardDrive;
 import com.etu.labs.Enums.Disk.DiskBrands;
 import com.etu.labs.Enums.Disk.DiskConnector;
 import com.etu.labs.Enums.Disk.DiskType;
+import com.etu.labs.util.GenericDB;
 
 import javax.print.DocFlavor;
 import javax.swing.*;
@@ -61,7 +63,9 @@ public class AddHardDrive extends AddTemplate{
         super.addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DiskBrands db = (DiskBrands) comboDiskBrand.getSelectedItem();
+                GenericDB<HardDrive> hardDriveDB = new GenericDB<>(HardDrive.class);
+                HardDrive newHardDrive = new HardDrive((DiskBrands) comboDiskBrand.getSelectedItem(), Integer.parseInt((String) comboYearProduction.getSelectedItem()), Integer.parseInt((String) comboDiskCapasity.getSelectedItem()), (DiskType) comboDiskType.getSelectedItem(), (DiskConnector) comboDiskConnector.getSelectedItem(), fieldDiskName.getText());
+                hardDriveDB.create(newHardDrive);
             }
         });
     }
