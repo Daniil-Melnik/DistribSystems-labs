@@ -75,4 +75,10 @@ public class Computer {
         setPcRAM(pcRAM);
         setNumOfRAM(numOfRAM);
     }
+
+    @Override
+    public String toString() {
+        String res = Integer.toString(id) + " " + Integer.toString(inventoryNumber) + " " + pcDisk.getDiskName() + " " + pcCPU.getFullName() + " " + pcMotherBoard.getFullName();
+        return  res;
+    }
 }

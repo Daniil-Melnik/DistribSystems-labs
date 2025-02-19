@@ -2,6 +2,9 @@ package com.etu.labs.util;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
+import java.util.List;
 
 public class GenericDB<T> {
 
@@ -9,6 +12,17 @@ public class GenericDB<T> {
 
     public GenericDB(Class<T> type) {
         this.type = type;
+    }
+
+    public List<T> getAll() {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            String hql = "FROM " + type.getSimpleName();
+            Query<T> query = session.createQuery(hql, type);
+            return query.getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public void create(T entity) {
