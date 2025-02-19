@@ -23,4 +23,7 @@ public enum DiskBrands {
     public String getDescription(){
         return brandTitle;
     }
+
+    @Override
+    public String toString(){ return brandTitle;}
 }
