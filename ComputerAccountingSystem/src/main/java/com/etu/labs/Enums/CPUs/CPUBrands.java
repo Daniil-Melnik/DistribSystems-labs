@@ -4,12 +4,16 @@ public enum CPUBrands {
     AMD ("AMD"),
     INTEL("Intel");
 
-    private String description;
+    private String brandName;
     CPUBrands(String str){
-        description = str;
+        brandName = str;
     }
 
     public String getDescription(){
-        return description;
+        return brandName;
     }
+
+    @Override
+    public String toString(){ return brandName;}
+
 }
