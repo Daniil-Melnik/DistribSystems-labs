@@ -1,6 +1,7 @@
 package com.etu.labs.Enums;
 
 public enum Sockets {
+    LGA775,
     LGA1700,
     LGA1200,
     LGA1155,

@@ -1,7 +1,7 @@
 package com.etu.labs.Enums.CPUs;
 
 public enum CPUSeries {
-    CORE ("core"),
+    CORE ("core 2"),
     CORE_I3 ("core i3"),
     CORE_I5 ("core i5"),
     CORE_I7 ("core i7"),

@@ -1,12 +1,8 @@
 package com.etu.labs.GUI.DialogWindows;
 
-import com.etu.labs.ComputerElements.HardDrive;
 import com.etu.labs.ComputerElements.ProcessorUnit;
 import com.etu.labs.Enums.CPUs.CPUBrands;
 import com.etu.labs.Enums.CPUs.CPUSeries;
-import com.etu.labs.Enums.Disk.DiskBrands;
-import com.etu.labs.Enums.Disk.DiskConnector;
-import com.etu.labs.Enums.Disk.DiskType;
 import com.etu.labs.Enums.RAMTypes;
 import com.etu.labs.Enums.Sockets;
 import com.etu.labs.util.GenericDB;
@@ -62,7 +58,7 @@ public class AddCPU extends AddTemplate{
             @Override
             public void actionPerformed(ActionEvent e) {
                 GenericDB<ProcessorUnit> processorUnitDB = new GenericDB<>(ProcessorUnit.class);
-                ProcessorUnit newProcessorUnit = new ProcessorUnit();
+                ProcessorUnit newProcessorUnit = new ProcessorUnit((Sockets) comboSocketType.getSelectedItem(), (CPUBrands) comboCPUBrand.getSelectedItem(), (CPUSeries) comboCPUSeries.getSelectedItem(), fieldCPUName.getText(), (RAMTypes) comboCPURAMType.getSelectedItem());
                 processorUnitDB.create(newProcessorUnit);
             }
         });

@@ -66,6 +66,7 @@ public class ProcessorUnit {
         setCpuBrand(cpuBrand);
         setCpuSeries(cpuSeries);
         setFullName(fullName);
+        setRamType(ramType);
     }
 
     public ProcessorUnit(int id, Sockets socketType, CPUBrands cpuBrand, CPUSeries cpuSeries, String fullName, RAMTypes ramType){
