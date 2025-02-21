@@ -17,4 +17,7 @@ public enum RAMBrands {
     private String name;
 
     RAMBrands(String str){name = str;}
+
+    @Override
+    public String toString(){ return name;}
 }
