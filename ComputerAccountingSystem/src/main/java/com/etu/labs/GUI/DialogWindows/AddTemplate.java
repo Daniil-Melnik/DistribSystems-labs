@@ -9,7 +9,7 @@ public class AddTemplate extends JFrame {
 
     public AddTemplate(String title) {
         setTitle(title);
-        setSize(250, 300);
+        setSize(250, 325);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(null);
 
@@ -19,7 +19,7 @@ public class AddTemplate extends JFrame {
         add(titleLabel);
 
         addButton = new JButton("Добавить");
-        addButton.setBounds(70, 230, 100, 30);
+        addButton.setBounds(70, 255, 100, 30);
         add(addButton);
 
         setLocationRelativeTo(null);
