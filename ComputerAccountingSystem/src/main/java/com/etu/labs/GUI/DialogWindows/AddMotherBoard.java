@@ -33,7 +33,7 @@ public class AddMotherBoard extends AddTemplate{
     private static final int NUM_FIELDS = 8;
 
     public AddMotherBoard(){
-        super("Добавление МП");
+        super("Добавление МП", 325);
         labelsField = new JLabel[NUM_FIELDS];
 
         fieldFullName = new JTextField();

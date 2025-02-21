@@ -28,7 +28,7 @@ public class AddHardDrive extends AddTemplate{
     private JLabel [] fieldLabels;
 
     public AddHardDrive(){
-        super("Добавление диска");
+        super("Добавление диска", 300);
         String [] years = prepareYears();
         fieldLabels = new JLabel[N_FIELDS];
 

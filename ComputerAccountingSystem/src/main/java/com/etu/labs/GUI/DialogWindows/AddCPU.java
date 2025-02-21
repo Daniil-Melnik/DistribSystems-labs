@@ -25,7 +25,7 @@ public class AddCPU extends AddTemplate{
     private final static int NUM_LABELS = 5;
 
     public AddCPU(){
-        super("Добавление ЦПУ");
+        super("Добавление ЦПУ", 300);
         labelsField = new JLabel[NUM_LABELS];
         comboCPUBrand = new JComboBox<CPUBrands>(CPUBrands.values());
         comboCPUSeries = new JComboBox<CPUSeries>(CPUSeries.values());

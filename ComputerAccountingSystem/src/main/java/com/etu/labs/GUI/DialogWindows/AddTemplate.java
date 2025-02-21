@@ -7,9 +7,9 @@ public class AddTemplate extends JFrame {
 
     protected JButton addButton;
 
-    public AddTemplate(String title) {
+    public AddTemplate(String title, int height) {
         setTitle(title);
-        setSize(250, 325);
+        setSize(250, height);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(null);
 
@@ -19,7 +19,7 @@ public class AddTemplate extends JFrame {
         add(titleLabel);
 
         addButton = new JButton("Добавить");
-        addButton.setBounds(70, 255, 100, 30);
+        addButton.setBounds(70, height - 75, 100, 30);
         add(addButton);
 
         setLocationRelativeTo(null);
