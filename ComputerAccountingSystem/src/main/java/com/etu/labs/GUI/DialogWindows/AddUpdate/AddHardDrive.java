@@ -1,9 +1,10 @@
-package com.etu.labs.GUI.DialogWindows;
+package com.etu.labs.GUI.DialogWindows.AddUpdate;
 
 import com.etu.labs.ComputerElements.HardDrive;
 import com.etu.labs.Enums.Disk.DiskBrands;
 import com.etu.labs.Enums.Disk.DiskConnector;
 import com.etu.labs.Enums.Disk.DiskType;
+import com.etu.labs.GUI.DialogWindows.AddTemplate;
 import com.etu.labs.util.GenericDB;
 
 import javax.swing.JComboBox;
@@ -13,7 +14,7 @@ import javax.swing.SwingUtilities;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddHardDrive extends AddTemplate{
+public class AddHardDrive extends AddTemplate {
 
     private static final String [] CAPASITY = {"80", "96", "120", "240", "250", "320", "480", "500", "512", "1000", "1500", "2000", "4000"};
     private static final int N_FIELDS = 6;

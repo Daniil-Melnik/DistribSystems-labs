@@ -1,18 +1,16 @@
-package com.etu.labs.GUI.DialogWindows;
+package com.etu.labs.GUI.DialogWindows.AddUpdate;
 
-import com.etu.labs.ComputerElements.MotherBoard;
 import com.etu.labs.ComputerElements.RandomAccessMemory;
-import com.etu.labs.Enums.MotherBoards.MotherBoardsBrands;
 import com.etu.labs.Enums.RAM.RAMBrands;
 import com.etu.labs.Enums.RAMTypes;
-import com.etu.labs.Enums.Sockets;
+import com.etu.labs.GUI.DialogWindows.AddTemplate;
 import com.etu.labs.util.GenericDB;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddRAM extends AddTemplate{
+public class AddRAM extends AddTemplate {
     private JComboBox<RAMBrands> comboRAMBrands;
     private JComboBox<RAMTypes> comboRAMType;
     private JTextField fieldFullName;

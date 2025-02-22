@@ -36,8 +36,7 @@ public class EntityUtil {
         return (mb.getNumRAM() < num) ? ErrorCodes.NUM_RAM : ErrorCodes.PERFECT;
     }
 
-    public static boolean checkComuter(Computer pc){
-        boolean code = true;
+    public static ArrayList<ErrorCodes> checkComuter(Computer pc){
         ArrayList<ErrorCodes> errorCodes = new ArrayList<>();
         ErrorCodes errorCode;
         if ((errorCode = checkCpuRam(pc.getPcCPU(), pc.getPcRAM())) != ErrorCodes.PERFECT){
@@ -59,6 +58,6 @@ public class EntityUtil {
         if ((errorCode = checkNumRam(pc.getPcMotherBoard(), pc.getNumOfRAM())) != ErrorCodes.PERFECT){
             errorCodes.add(errorCode);
         }
-        return code;
+        return errorCodes;
     }
 }

@@ -1,17 +1,18 @@
-package com.etu.labs.GUI.DialogWindows;
+package com.etu.labs.GUI.DialogWindows.AddUpdate;
 
 import com.etu.labs.ComputerElements.ProcessorUnit;
 import com.etu.labs.Enums.CPUs.CPUBrands;
 import com.etu.labs.Enums.CPUs.CPUSeries;
 import com.etu.labs.Enums.RAMTypes;
 import com.etu.labs.Enums.Sockets;
+import com.etu.labs.GUI.DialogWindows.AddTemplate;
 import com.etu.labs.util.GenericDB;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddCPU extends AddTemplate{
+public class AddCPU extends AddTemplate {
 
     private JComboBox<CPUBrands> comboCPUBrand;
     private JComboBox<CPUSeries> comboCPUSeries;

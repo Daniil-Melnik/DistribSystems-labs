@@ -1,15 +1,27 @@
-package com.etu.labs.GUI.DialogWindows;
+package com.etu.labs.GUI.DialogWindows.AddUpdate;
 
+import com.etu.labs.Computer;
 import com.etu.labs.ComputerElements.HardDrive;
 import com.etu.labs.ComputerElements.MotherBoard;
 import com.etu.labs.ComputerElements.ProcessorUnit;
 import com.etu.labs.ComputerElements.RandomAccessMemory;
+import com.etu.labs.Enums.CPUs.CPUBrands;
+import com.etu.labs.Enums.CPUs.CPUSeries;
+import com.etu.labs.Enums.RAMTypes;
+import com.etu.labs.Enums.Sockets;
+import com.etu.labs.Enums.Util.ErrorCodes;
+import com.etu.labs.GUI.DialogWindows.AddTemplate;
+import com.etu.labs.GUI.DialogWindows.Messages;
+import com.etu.labs.util.EntityUtil;
 import com.etu.labs.util.GenericDB;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
-public class AddComputer extends AddTemplate{
+public class AddComputer extends AddTemplate {
 
     private JComboBox<String> comboHardDrive;
     private JComboBox<String> comboCPU;
@@ -66,6 +78,21 @@ public class AddComputer extends AddTemplate{
         add(comboCPU);
         add(comboNumRAM);
         add(fieldInvNum);
+
+        super.addButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GenericDB<Computer> pcDB = new GenericDB<>(Computer.class);
+                Computer newComputer = new Computer(hdL.get(comboHardDrive.getSelectedIndex()), mbL.get(comboMB.getSelectedIndex()), cpuL.get(comboCPU.getSelectedIndex()), ramL.get(comboRAM.getSelectedIndex()), Integer.parseInt(fieldInvNum.getText()), Integer.parseInt(comboNumRAM.getSelectedItem().toString()));
+                ArrayList<ErrorCodes> eC = EntityUtil.checkComuter(newComputer);
+                if (eC.size() != 0) {
+                    Messages.showBadMessage(eC);
+                }
+                else {
+                    pcDB.create(newComputer);
+                }
+            }
+        });
     }
 
     public static <T> String[] toComboList(List<T> list) {
