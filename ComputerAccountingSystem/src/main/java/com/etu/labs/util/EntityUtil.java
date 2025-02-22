@@ -15,7 +15,7 @@ public class EntityUtil {
     private static final int NUM_CODES = 6;
 
     private static ErrorCodes checkDiskMB(HardDrive disk, MotherBoard motherBoard){
-        return (!(((disk.getConnectorType() == DiskConnector.M_2) && (motherBoard.getNumM2() == 0))
+        return ((((disk.getConnectorType() == DiskConnector.M_2) && (motherBoard.getNumM2() == 0))
                 || ((disk.getConnectorType() == DiskConnector.SATA) && (motherBoard.getNumSATA() == 0))))
                 ? ErrorCodes.DISK_CONNECTOR : ErrorCodes.PERFECT;
     }

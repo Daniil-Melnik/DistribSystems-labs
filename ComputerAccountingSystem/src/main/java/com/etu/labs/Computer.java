@@ -5,14 +5,7 @@ import com.etu.labs.ComputerElements.MotherBoard;
 import com.etu.labs.ComputerElements.ProcessorUnit;
 import com.etu.labs.ComputerElements.RandomAccessMemory;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "computers")
@@ -25,19 +18,19 @@ public class Computer {
     @Column(name = "inventory_number")
     private int inventoryNumber;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "disk_pc_id", referencedColumnName = "disk_id")
     private HardDrive pcDisk;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "mb_pc_id", referencedColumnName = "mb_id")
     private MotherBoard pcMotherBoard;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "cpu_pc_id", referencedColumnName = "cpu_id")
     private ProcessorUnit pcCPU;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "ram_pc_id", referencedColumnName = "ram_id")
     private RandomAccessMemory pcRAM;
 
