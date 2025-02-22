@@ -89,4 +89,9 @@ public class MotherBoard {
         setNumM2(numM2);
         setNumSATA(numSATA);
     }
+
+    @Override
+    public String toString() {
+        return MBBrand.toString() + " " + fullName;
+    }
 }

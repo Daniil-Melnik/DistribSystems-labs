@@ -85,4 +85,9 @@ public class HardDrive {
         setConnectorType(connectorType);
         setDiskName(diskName);
     }
+
+    @Override
+    public String toString() {
+        return getBrand().toString() + " " + diskName + " " + capacity;
+    }
 }

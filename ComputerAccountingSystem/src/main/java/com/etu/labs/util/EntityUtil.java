@@ -48,6 +48,17 @@ public class EntityUtil {
             errorCodes.add(errorCode);
         }
 
+        if ((errorCode = checkDiskMB(pc.getPcDisk(), pc.getPcMotherBoard())) != ErrorCodes.PERFECT){
+            errorCodes.add(errorCode);
+        }
+
+        if ((errorCode = checkMbRam(pc.getPcMotherBoard(), pc.getPcRAM())) != ErrorCodes.PERFECT){
+            errorCodes.add(errorCode);
+        }
+
+        if ((errorCode = checkNumRam(pc.getPcMotherBoard(), pc.getNumOfRAM())) != ErrorCodes.PERFECT){
+            errorCodes.add(errorCode);
+        }
         return code;
     }
 }

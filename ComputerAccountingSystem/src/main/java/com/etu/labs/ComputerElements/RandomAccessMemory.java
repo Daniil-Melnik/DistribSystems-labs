@@ -65,4 +65,9 @@ public class RandomAccessMemory {
         setBrand(ramBrands);
         setType(ramTypes);
     }
+
+    @Override
+    public String toString() {
+        return brand.toString() + " " + fullName + " " + capacity;
+    }
 }

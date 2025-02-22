@@ -24,7 +24,7 @@ public class AddRAM extends AddTemplate{
     private static final int NUM_FIELDS = 4;
 
     public AddRAM(){
-        super("Добавление ОЗУ", 275);
+        super("Добавление ОЗУ", 250, 275);
         fieldLabels = new JLabel[NUM_FIELDS];
 
         comboRAMBrands = new JComboBox<RAMBrands>(RAMBrands.values());

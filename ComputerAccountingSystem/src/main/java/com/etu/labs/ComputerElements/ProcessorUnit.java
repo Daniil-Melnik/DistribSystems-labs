@@ -77,4 +77,9 @@ public class ProcessorUnit {
         setFullName(fullName);
         setRamType(ramType);
     }
+
+    @Override
+    public String toString() {
+        return cpuBrand.toString() + " " + cpuSeries + " " + fullName;
+    }
 }
