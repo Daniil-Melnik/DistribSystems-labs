@@ -4,7 +4,6 @@ import com.etu.labs.ComputerElements.HardDrive;
 import com.etu.labs.Enums.Disk.DiskBrands;
 import com.etu.labs.Enums.Disk.DiskConnector;
 import com.etu.labs.Enums.Disk.DiskType;
-import com.etu.labs.GUI.DialogWindows.AddTemplate;
 import com.etu.labs.util.GenericDB;
 
 import javax.swing.JComboBox;

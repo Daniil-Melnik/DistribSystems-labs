@@ -4,7 +4,6 @@ import com.etu.labs.ComputerElements.MotherBoard;
 import com.etu.labs.Enums.MotherBoards.MotherBoardsBrands;
 import com.etu.labs.Enums.RAMTypes;
 import com.etu.labs.Enums.Sockets;
-import com.etu.labs.GUI.DialogWindows.AddTemplate;
 import com.etu.labs.util.GenericDB;
 
 import javax.swing.*;

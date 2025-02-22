@@ -47,6 +47,9 @@ public class AddingEntities {
         processorUnit = new ProcessorUnit(Sockets.LGA1700, CPUBrands.INTEL, CPUSeries.CORE_I5, "12400", RAMTypes.DDR4);
         processorUnitsDB.create(processorUnit);
 
+        processorUnit = new ProcessorUnit(Sockets.AM4, CPUBrands.AMD, CPUSeries.RYZEN_5, "5500", RAMTypes.DDR4);
+        processorUnitsDB.create(processorUnit);
+
         RandomAccessMemory newRAM = new RandomAccessMemory(RAMBrands.KINGSTON, RAMTypes.DDR4, "KF432C16BBK2", 16);
         randomAccesMemoryDB.create(newRAM);
 

@@ -5,13 +5,7 @@ import com.etu.labs.ComputerElements.HardDrive;
 import com.etu.labs.ComputerElements.MotherBoard;
 import com.etu.labs.ComputerElements.ProcessorUnit;
 import com.etu.labs.ComputerElements.RandomAccessMemory;
-import com.etu.labs.Enums.CPUs.CPUBrands;
-import com.etu.labs.Enums.CPUs.CPUSeries;
-import com.etu.labs.Enums.RAMTypes;
-import com.etu.labs.Enums.Sockets;
 import com.etu.labs.Enums.Util.ErrorCodes;
-import com.etu.labs.GUI.DialogWindows.AddTemplate;
-import com.etu.labs.GUI.DialogWindows.Messages;
 import com.etu.labs.util.EntityUtil;
 import com.etu.labs.util.GenericDB;
 

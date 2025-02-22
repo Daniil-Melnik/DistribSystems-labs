@@ -1,4 +1,4 @@
-package com.etu.labs.GUI.DialogWindows;
+package com.etu.labs.GUI.DialogWindows.AddUpdate;
 
 import javax.swing.*;
 import java.awt.*;

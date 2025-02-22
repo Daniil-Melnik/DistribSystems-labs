@@ -5,7 +5,6 @@ import com.etu.labs.Enums.CPUs.CPUBrands;
 import com.etu.labs.Enums.CPUs.CPUSeries;
 import com.etu.labs.Enums.RAMTypes;
 import com.etu.labs.Enums.Sockets;
-import com.etu.labs.GUI.DialogWindows.AddTemplate;
 import com.etu.labs.util.GenericDB;
 
 import javax.swing.*;

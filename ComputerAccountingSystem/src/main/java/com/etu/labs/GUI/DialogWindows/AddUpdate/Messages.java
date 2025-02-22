@@ -1,4 +1,4 @@
-package com.etu.labs.GUI.DialogWindows;
+package com.etu.labs.GUI.DialogWindows.AddUpdate;
 
 import com.etu.labs.Enums.Util.ErrorCodes;
 

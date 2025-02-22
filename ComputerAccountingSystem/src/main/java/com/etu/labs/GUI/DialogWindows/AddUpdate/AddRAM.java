@@ -3,7 +3,6 @@ package com.etu.labs.GUI.DialogWindows.AddUpdate;
 import com.etu.labs.ComputerElements.RandomAccessMemory;
 import com.etu.labs.Enums.RAM.RAMBrands;
 import com.etu.labs.Enums.RAMTypes;
-import com.etu.labs.GUI.DialogWindows.AddTemplate;
 import com.etu.labs.util.GenericDB;
 
 import javax.swing.*;
