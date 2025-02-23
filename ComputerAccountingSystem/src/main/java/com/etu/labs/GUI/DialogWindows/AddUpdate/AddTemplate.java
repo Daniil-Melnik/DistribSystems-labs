@@ -10,7 +10,7 @@ public class AddTemplate extends JFrame {
     public AddTemplate(String title, int width, int height) {
         setTitle(title);
         setSize(width, height);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
 
         JLabel titleLabel = new JLabel(title, SwingConstants.CENTER);
@@ -23,6 +23,6 @@ public class AddTemplate extends JFrame {
         add(addButton);
 
         setLocationRelativeTo(null);
-        setVisible(true);
+
     }
 }

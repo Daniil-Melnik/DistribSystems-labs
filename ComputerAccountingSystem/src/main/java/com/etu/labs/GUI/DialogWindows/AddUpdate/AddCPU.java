@@ -5,6 +5,7 @@ import com.etu.labs.Enums.CPUs.CPUBrands;
 import com.etu.labs.Enums.CPUs.CPUSeries;
 import com.etu.labs.Enums.RAMTypes;
 import com.etu.labs.Enums.Sockets;
+import com.etu.labs.GUI.Windows.CpuWindow;
 import com.etu.labs.util.GenericDB;
 
 import javax.swing.*;
@@ -24,8 +25,9 @@ public class AddCPU extends AddTemplate {
     private final static String [] FIELD_LABELS = {"Бренд", "Серия", "Тип ОЗУ", "Наименование", "Сокет"};
     private final static int NUM_LABELS = 5;
 
-    public AddCPU(){
+    public AddCPU(CpuWindow parent){
         super("Добавление ЦПУ", 250, 300);
+
         labelsField = new JLabel[NUM_LABELS];
         comboCPUBrand = new JComboBox<CPUBrands>(CPUBrands.values());
         comboCPUSeries = new JComboBox<CPUSeries>(CPUSeries.values());
@@ -57,14 +59,10 @@ public class AddCPU extends AddTemplate {
         super.addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GenericDB<ProcessorUnit> processorUnitDB = new GenericDB<>(ProcessorUnit.class);
                 ProcessorUnit newProcessorUnit = new ProcessorUnit((Sockets) comboSocketType.getSelectedItem(), (CPUBrands) comboCPUBrand.getSelectedItem(), (CPUSeries) comboCPUSeries.getSelectedItem(), fieldCPUName.getText(), (RAMTypes) comboCPURAMType.getSelectedItem());
-                processorUnitDB.create(newProcessorUnit);
+                dispose();
+                parent.addCPU(newProcessorUnit);
             }
         });
-    }
-
-    public static void main(String [] args){
-        SwingUtilities.invokeLater(() -> new AddCPU());
     }
 }
