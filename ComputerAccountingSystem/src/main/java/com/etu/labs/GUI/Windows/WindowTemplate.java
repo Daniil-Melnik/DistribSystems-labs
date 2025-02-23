@@ -17,7 +17,7 @@ public class WindowTemplate extends JFrame {
         setSize(width, height);
         setLayout(null);
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         labelTitle = new JLabel(title);
         labelTitle.setBounds(0, 10, width, 25);

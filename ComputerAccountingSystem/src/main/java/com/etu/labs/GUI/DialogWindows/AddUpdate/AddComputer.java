@@ -6,6 +6,7 @@ import com.etu.labs.ComputerElements.MotherBoard;
 import com.etu.labs.ComputerElements.ProcessorUnit;
 import com.etu.labs.ComputerElements.RandomAccessMemory;
 import com.etu.labs.Enums.Util.ErrorCodes;
+import com.etu.labs.GUI.Windows.ComputerWindow;
 import com.etu.labs.util.EntityUtil;
 import com.etu.labs.util.GenericDB;
 
@@ -30,7 +31,7 @@ public class AddComputer extends AddTemplate {
 
     private static final int NUM_FIELDS = 6;
 
-    public AddComputer(){
+    public AddComputer(ComputerWindow parent){
         super("Добавление ПК", 350, 325);
         fieldLabels = new JLabel[NUM_FIELDS];
         GenericDB<HardDrive> hardDriveDB = new GenericDB<HardDrive>(HardDrive.class);
@@ -83,7 +84,8 @@ public class AddComputer extends AddTemplate {
                     Messages.showBadMessage(eC);
                 }
                 else {
-                    pcDB.create(newComputer);
+                    dispose();
+                    parent.addComputer(newComputer);
                 }
             }
         });
@@ -93,9 +95,5 @@ public class AddComputer extends AddTemplate {
         return list.stream()
                 .map(Object::toString)
                 .toArray(String[]::new);
-    }
-
-    public static void main(String [] args){
-        SwingUtilities.invokeLater(() -> new AddComputer());
     }
 }
